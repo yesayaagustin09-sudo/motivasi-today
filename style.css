@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Ganti background-color dengan properti background image */
+    
+    /* PROPERTI BARU DIMULAI DI SINI */
+    background-image: url(love.jpg); /* Ganti dengan URL/path gambar Anda */
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-attachment: fixed; 
+
+    color: #333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+header {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    text-align: center;
+}
+
+.kata-semangat {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#quote-display {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: black
+}
+
+#next-quote-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+#next-quote-btn:hover {
+    background-color: #FFA000;
+}
+
+/* --- Animasi Hati/Love --- */
+
+.love-container {
+    position: fixed; /* Penting untuk animasi mengambang */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Agar tidak menghalangi klik tombol */
+    overflow: hidden;
+}
+
+.love {
+    position: absolute;
+    color:hotpink /* Warna pink/merah muda */
+    font-size: 2em;
+    animation: floatUp 4s ease-out forwards;
+    opacity: 0;
+    user-select: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-500px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Memastikan footer di bawah */
+}
